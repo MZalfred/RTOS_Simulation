@@ -1,0 +1,10 @@
+RTOS Simulation starting...
+
+Task 1 running
+Task 2 running
+Task 1 running
+Task 3 running
+Task 1 running
+Task 2 running
+Task 4 running
+Task 1 running
