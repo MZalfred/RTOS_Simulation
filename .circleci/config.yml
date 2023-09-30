@@ -1,10 +1,17 @@
 version: 2.1
+
 jobs:
   build:
     docker:
       - image: gcc:latest
     steps:
       - checkout
-      - run: gcc -o main main.c
-      - run: ./main
-      - run: ./your-test-script
+      - run: gcc -o main main.c  # Compiling main code
+      - run: ./main  # Running main code
+      - run: gcc -o test_schedule test_schedule.c schedule.c unity.c  # Compiling test code
+      - run: ./test_schedule  # Running test code
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
