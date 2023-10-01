@@ -8,9 +8,9 @@ typedef struct {
     int lastRun;
 } Task;
 
-void tasks1();
-void tasks2();
+void task1();  // Corrected from tasks1
+void task2();  // Corrected from tasks2
 void sortTasks();
-void scheduler();
+void scheduler(int systemTime);  // Only one scheduler declaration with systemTime parameter
 
 #endif // SCHEDULER_H
