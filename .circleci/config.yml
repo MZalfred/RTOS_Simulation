@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: gcc -o main main.c  # Compiling main code
       - run: ./main  # Running main code
-      - run: gcc -o test_scheduler test_scheduler.c scheduler.c unity.c  # Compiling test code
+      - run: gcc -o test_schedule test_scheduler.c scheduler.c unity.c -I.  # add -I. to include the current directory
       - run: ./test_scheduler  # Running test code
 
 workflows:
