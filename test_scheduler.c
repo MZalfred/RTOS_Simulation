@@ -1,5 +1,15 @@
 #include "unity.h"
-#include "schedule.h"
+#include "scheduler.h"  // Replace "schedule.h" with the correct header file if needed
+
+extern Task *tasks;  // Declare the tasks array as extern, to make sure the linker uses the one defined in your other C file.
+
+void setUp(void) {
+    // Initialize some tasks here, if needed
+}
+
+void tearDown(void) {
+    // Clean up tasks here, if needed
+}
 
 void test_task1_priority(void) {
     TEST_ASSERT_EQUAL(1, tasks[0].priority);
