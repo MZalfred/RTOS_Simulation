@@ -6,10 +6,10 @@ jobs:
       - image: gcc:latest
     steps:
       - checkout
-      - run: gcc -o main main.c  # Compiling main code along with scheduler.c
+      - run: gcc -o main main.c  # Compiling main code
       - run: ./main  # Running main code
-      - run: gcc -o test_schedule test_schedule.c schedule.c unity.c  # Compiling test code along with scheduler.c and unity.c
-      - run: ./test_schedule  # Running test code
+      - run: gcc -o test_scheduler test_scheduler.c scheduler.c unity.c  # Compiling test code
+      - run: ./test_scheduler  # Running test code
 
 workflows:
   build_and_test:
